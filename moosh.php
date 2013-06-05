@@ -6,7 +6,7 @@
  * @copyright  2012 onwards Tomasz Muras
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
+set_include_path(dirname(__FILE__) . ':' . get_include_path());
 $cwd = getcwd();
 $moosh_dir = __DIR__;
 
