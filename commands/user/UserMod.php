@@ -75,7 +75,8 @@ class UserMod extends MooshCommand
             }
 
             if($this->parsedOptions->has('password')) {
-                $user->password = md5($this->parsedOptions['password']->value);
+                //$user->password = md5($this->parsedOptions['password']->value);
+                update_internal_user_password($user, $this->parsedOptions['password']->value);
             }
             if($this->parsedOptions->has('email')) {
                 $user->email = $this->parsedOptions['email']->value;
